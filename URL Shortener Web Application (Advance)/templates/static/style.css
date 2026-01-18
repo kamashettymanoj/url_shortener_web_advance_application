@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Card */
+.container-box {
+    background: white;
+    padding: 25px 30px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Error Text */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* List */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: #f1f1f1;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Copy Button */
+.copy-btn {
+    background: #28a745;
+}
+
+.copy-btn:hover {
+    background: #1e7e34;
+}

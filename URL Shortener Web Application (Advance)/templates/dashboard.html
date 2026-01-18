@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container-box">
+
+<h2>Welcome {{ current_user.username }}</h2>
+
+<a href="/logout">Logout</a>
+
+<hr>
+
+<form method="POST">
+
+<input type="text" name="url" placeholder="Enter URL Here" required>
+
+<button>Shorten URL</button>
+
+</form>
+
+<p class="error">{{ error }}</p>
+
+{% if short_url %}
+<hr>
+
+<h4>Short URL</h4>
+
+<input id="shortUrl" value="{{ short_url }}" readonly>
+
+<button class="copy-btn" onclick="copyURL()">Copy</button>
+{% endif %}
+
+<hr>
+
+<h4>Your History</h4>
+
+<ul>
+{% for url in urls %}
+<li>{{ url.original_url }} → {{ request.host_url }}{{ url.short_url }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<script>
+function copyURL(){
+    let copyText = document.getElementById("shortUrl");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied Successfully!");
+}
+</script>
+
+</body>
+</html>
